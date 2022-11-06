@@ -9,13 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductsComponent } from './pages/products/products.component';
-<<<<<<< HEAD
-
-=======
-import { AboutComponent } from './pages/about/about.component';
 import { BasePageComponent } from './partials/base-page/base-page.component';
 import { LoginComponent } from './pages/login/login.component';
->>>>>>> Eduardo
+
 
 @NgModule({
   declarations: [
@@ -25,14 +21,10 @@ import { LoginComponent } from './pages/login/login.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-<<<<<<< HEAD
-    ProductsComponent
-=======
     ProductsComponent,
     AboutComponent,
     BasePageComponent,
     LoginComponent
->>>>>>> Eduardo
   ],
   imports: [
     BrowserModule,

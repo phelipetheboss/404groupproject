@@ -11,6 +11,12 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { BasePageComponent } from './partials/base-page/base-page.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ListSurveyComponent } from './pages/list-survey/list-survey.component';
+import { CreateSurveyComponent } from './pages/create-survey/create-survey.component';
+import { UpdateSurveyComponent } from './pages/update-survey/update-survey.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,11 +30,16 @@ import { LoginComponent } from './pages/login/login.component';
     ProductsComponent,
     AboutComponent,
     BasePageComponent,
-    LoginComponent
+    LoginComponent,
+    ListSurveyComponent,
+    CreateSurveyComponent,
+    UpdateSurveyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

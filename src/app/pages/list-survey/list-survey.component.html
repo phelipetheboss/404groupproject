@@ -1,0 +1,12 @@
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <br/><br/>
+    <ul class="list-group">
+      <tr *ngFor="let survey of surveyList">
+        <td class="list-group-item">
+          {{survey.surveyName}}
+          <button type="button" class="delete" (click)="deleteSurvey(survey.id)">Delete</button>
+          <button type="button" class="edit" ><a href="#" [routerLink]="['/update-survey/', survey.id]">Edit</a></button>
+        </td>
+      </tr>
+    </ul>
+  </div>  

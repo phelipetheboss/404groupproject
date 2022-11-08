@@ -39,6 +39,6 @@ export class CreateSurveyComponent{
 
   createSurvey(survey: any){
     this.crudHttpService.create(survey).subscribe();
-    this.router.navigate(['/list-survey']);
+    this.router.navigate(['/home']);
 }
 }

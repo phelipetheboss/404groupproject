@@ -22,7 +22,7 @@ export class UpdateSurveyComponent{
     let API_URL = `http://localhost:3000/surveys/${route.snapshot.paramMap.get('id')}`;
     this.http.get(API_URL).toPromise().then(data => {
       this.mySurvey = data;
-
+      
       this.survey = this.fb.group({
         surveyName: [this.mySurvey.surveyName],
         questions: this.fb.array(this.mySurvey.questions.map((r: any) => this.fb.group(r)))
@@ -46,6 +46,11 @@ export class UpdateSurveyComponent{
     });
 
     this.questions.push(questionForm);
+  }
+
+  updateQuestion(id: any, data: any){
+    this.crudHttpService.update(id,data);
+    this.router.navigate(['/home']);
   }
 
   removeQuestion(questionIndex: number){

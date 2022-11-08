@@ -32,10 +32,9 @@ export class CrudHttpService {
   }
 
   // Update
-  update(id: any, data: any): Observable<any> {
+  update(id: any, updatedSurvey: any) {
     let API_URL = `${this.apiUrl}/${id}`;
-
-    return this.http.put(API_URL, data, { headers: this.headers });
+    return this.http.put(API_URL, updatedSurvey).subscribe();
   }
 
   // Delete

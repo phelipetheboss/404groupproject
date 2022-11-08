@@ -24,14 +24,6 @@ export class ListSurveyComponent implements OnInit {
     }));
   }
 
-  editSurvey(survey: any){
-    this.crudHttpService.update(survey.id,survey).subscribe((response)=>{
-      this.listSurveys();
-    },(error=>{
-
-    }));
-  }
-
   deleteSurvey(id: any){
     this.crudHttpService.delete(id).subscribe((response)=>{
       this.listSurveys();

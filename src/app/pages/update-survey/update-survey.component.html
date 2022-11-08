@@ -1,4 +1,4 @@
-<h1>New survey</h1>
+<h1>Update survey</h1>
 
 <form [formGroup]="survey">
   <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#addQuestion" (click)="addQuestion()">
@@ -19,31 +19,31 @@
                 <input type="text" class="form-control" id="description" placeholder="Question" formControlName="description">
             </div>
             Question Type: 
-            <div *ngIf="questions.controls[i].value.questionType === 'trueFalse'; else multipleChoice">
+            <div *ngIf="questions.controls[i].value.questionType === 'multipleChoice'; else trueFalse">
                 <select class="form-select" formControlName="questionType" onchange="changeQuestionType(event.currentTarget)">
-                    <option value="trueFalse">True/False</option>
-                    <option value="multipleChoice">Multiple Choice</option>
-                </select>
+                  <option value="trueFalse">True/False</option>
+                  <option value="multipleChoice">Multiple Choice</option>
+              </select>
+              <div>
+              <div class="form-group">
+                  <input type="text" class="form-control" id="optionA" placeholder="Option A" formControlName="optionA">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="optionB" placeholder="Option B" formControlName="optionB">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="optionC" placeholder="Option C" formControlName="optionC">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="optionD" placeholder="Option D" formControlName="optionD">
+              </div>
+          </div>
             </div>
-            <ng-template #multipleChoice>
-                <select class="form-select" formControlName="questionType" onchange="changeQuestionType(event.currentTarget)">
-                    <option value="trueFalse">True/False</option>
-                    <option value="multipleChoice">Multiple Choice</option>
-                </select>
-                <div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="optionA" placeholder="Option A" formControlName="optionA">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="optionB" placeholder="Option B" formControlName="optionB">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="optionC" placeholder="Option C" formControlName="optionC">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="optionD" placeholder="Option D" formControlName="optionD">
-                </div>
-            </div>
+            <ng-template #trueFalse>
+              <select class="form-select" formControlName="questionType" onchange="changeQuestionType(event.currentTarget)">
+                <option value="trueFalse">True/False</option>
+                <option value="multipleChoice">Multiple Choice</option>
+              </select>
             </ng-template>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" (click)="removeQuestion(i)">Remove</button>
@@ -52,6 +52,6 @@
       </div>
     </ng-container>
   </ng-container>
-  <button type="submit" class="btn btn-primary" id="submit">Update survey</button>
+  <button type="submit" class="btn btn-primary" (click)="updateQuestion(mySurvey.id, survey.value)">Update survey</button>
 </form>
 

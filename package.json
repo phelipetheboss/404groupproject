@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "json:server": "json-server --watch surveys.json",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "json": "json-server data.js -p 3500 -m authMiddleware.js"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "@fortawesome/fontawesome-free": "^6.2.0",
     "bootstrap": "^5.2.2",
     "jquery": "^3.6.1",
+    "json-server": "^0.17.1",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -35,8 +36,6 @@
     "@types/jasmine": "~4.0.0",
     "@types/jquery": "^3.5.14",
     "jasmine-core": "~4.3.0",
-    "json-server": "^0.17.1",
-    "jsonwebtoken": "^8.5.1",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",

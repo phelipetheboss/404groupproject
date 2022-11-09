@@ -29,8 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Heroku link
  https://e404-survey.herokuapp.com/
 
- Testando o git dando commite 
-
- Teste 2
 
 

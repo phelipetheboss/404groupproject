@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CrudHttpService } from '../../crud/crud-http.service';
+import { CrudHttpService } from '../../../crud/crud-http.service';
+
 
 @Component({
   selector: 'app-list-survey',

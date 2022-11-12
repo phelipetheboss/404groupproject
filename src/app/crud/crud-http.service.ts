@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import { ListSurveyComponent } from '../pages/list-survey/list-survey.component';
+import { ListSurveyComponent } from '../pages/survey/list-survey/list-survey.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudHttpService {
-  
+
   apiUrl: string = 'http://localhost:3000/surveys';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -39,7 +39,7 @@ export class CrudHttpService {
 
   // Delete
   delete(id: any): Observable<any> {
-    var API_URL = `${this.apiUrl}/${id}`;
+    let API_URL = `${this.apiUrl}/${id}`;
 
     return this.http.delete(API_URL);
   }

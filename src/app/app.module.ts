@@ -7,11 +7,9 @@ import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { BasePageComponent } from './partials/base-page/base-page.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ListSurveyComponent } from './pages/list-survey/list-survey.component';
+import { ListSurveyComponent } from './pages/survey/list-survey/list-survey.component';
 import { CreateSurveyComponent } from './pages/create-survey/create-survey.component';
 import { UpdateSurveyComponent } from './pages/update-survey/update-survey.component';
 
@@ -26,8 +24,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent,
-    ProductsComponent,
     AboutComponent,
     BasePageComponent,
     LoginComponent,
